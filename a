@@ -6,7 +6,7 @@ do
     setreadonly(mt, false);
     mt.__newindex = newcclosure(function(self, k, v)
         if (k == 'Text' and v == 'ABA GUI') then
-            v = "Porn Hub"
+            v = "NukeVsCity"
         end;
         return oldnidx(self, k, v)
     end);
