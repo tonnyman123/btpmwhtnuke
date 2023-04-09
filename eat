@@ -1,0 +1,14 @@
+getgenv().AutoEat = true -- true = on false = off
+while AutoEat do
+    local partsEat = game:GetService("Workspace").World.Visuals
+
+    for i, v in ipairs(partsEat:GetChildren()) do
+        local prompt = v:FindFirstChild("Eat_Part");
+        if prompt and prompt:IsA("ProximityPrompt") then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+            fireproximityprompt(prompt)
+            task.wait(2)
+        end
+    end
+    task.wait()
+end
