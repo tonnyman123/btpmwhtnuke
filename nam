@@ -1,0 +1,8 @@
+local LP = game:GetService("Players").LocalPlayer
+
+for i,v in pairs(LP.PlayerGui:GetChildren()) do
+    if v:FindFirstChild("LocalScript") then
+        local ScreenGui = v
+        ScreenGui:Destroy()
+    end
+end
